@@ -1,6 +1,0 @@
-node_modules
-.vscode
-gulpfile.js
-package-lock.json
-package.json
-style.scss
