@@ -4,8 +4,3 @@ gulpfile.js
 package-lock.json
 package.json
 style.scss
-<<<<<<< HEAD
-.gitignore
-=======
-.gitignore
->>>>>>> d8ed560f98461ccb598d0fd55866297d6029e7d5
