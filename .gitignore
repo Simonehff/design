@@ -3,4 +3,5 @@ node_modules
 gulpfile.js
 package-lock.json
 package.json
-style.scss
+global.scss
+margin.scss
