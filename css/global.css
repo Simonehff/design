@@ -32,7 +32,8 @@
 
 .t-about {
   position: relative;
-  margin-left: -50px; }
+  margin-left: -56px;
+  margin-bottom: -20px; }
 
 h1 {
   font-family: 'Mulish', sans-serif;
@@ -67,11 +68,10 @@ h5 {
 
 h6 {
   font-family: 'Mulish', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 150%; }
 
 .small {
-  font-family: 'Rubik', sans-serif;
   font-size: 0.85rem;
   color: #4B4F62;
   line-height: 150%; }
@@ -85,9 +85,10 @@ p {
   font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 0.95rem;
-  line-height: 200%;
-  color: #23273A; }
+  font-size: 1rem;
+  line-height: 160%;
+  color: #23273A;
+  margin-bottom: 6px; }
 
 @media (max-width: 1280px) {
   .title {
@@ -165,7 +166,7 @@ body {
   font-family: 'Karla', sans-serif;
   letter-spacing: 0.03rem;
   color: #2F3347;
-  overflow: hidden; }
+  overflow-y: hidden; }
 
 .main-header {
   position: absolute;
@@ -177,7 +178,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 100%; }
+  width: 100%;
+  position: sticky;
+  background-color: #fff; }
 
 .section-header {
   display: flex;
@@ -194,7 +197,7 @@ body {
   min-width: 0;
   z-index: 1;
   color: #BABFD5;
-  font-size: 2.2rem;
+  font-size: 1.3rem;
   font-weight: 300; }
 
 hr {
@@ -205,11 +208,11 @@ hr {
   display: grid;
   grid-column-gap: 20px;
   position: relative;
-  margin: 0px;
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  overflow: hidden;
-  height: 100vh; }
+  overflow: auto;
+  height: calc(100vh - 90px); }
 
 .section-1 {
   grid-column: 2 / span 6;
@@ -217,7 +220,8 @@ hr {
   position: absolute;
   top: 50%;
   width: 100%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  overflow: visible; }
 
 .section-2 {
   grid-column: 8 / span 7;
@@ -236,7 +240,8 @@ hr {
 
 .section-2-about {
   display: grid;
-  overflow: visible; }
+  overflow: visible;
+  padding-right: 60px; }
 
 .main .section-3 a img {
   display: inline-flex;
@@ -248,20 +253,20 @@ hr {
   width: calc((100% / 3) - 2px); }
 
 .section-4 {
-  position: absolute;
-  grid-column: 1 / span 6;
-  background-color: #FCFCFD;
-  height: 460px;
-  z-index: -1;
-  top: 50%;
-  left: 0;
-  width: 100%; }
+  background-color: #F9F9FB;
+  width: 100%;
+  margin-left: -150px;
+  padding-left: 150px;
+  width: auto; }
 
 tr {
   vertical-align: initial; }
 
 .about-table {
   width: 100%; }
+
+.about-table p {
+  color: #4B4F62; }
 
 .about-table tr td {
   padding-top: 20px; }
@@ -369,6 +374,14 @@ tr {
   transition: transform 0.5s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
 
+@media (max-height: 950px) {
+  .section-1,
+  .section-2 {
+    position: relative;
+    top: auto;
+    transform: none;
+    padding-bottom: 40px; } }
+
 @media (max-width: 1280px) {
   .sh-menu {
     margin-left: -22px; }
@@ -432,8 +445,8 @@ tr {
 
 @media (max-width: 480px) {
   .sh-logo {
-    padding-bottom: 10px;
-    font-size: 1.8rem; }
+    padding-bottom: 8px;
+    font-size: 1.6rem; }
   .section-1 {
     position: absolute;
     top: 50%;
