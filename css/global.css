@@ -25,6 +25,12 @@
 .dark-purple {
   color: #2A366F; }
 
+.decos-pink {
+  color: #FF4291; }
+
+strong {
+  font-weight: bold; }
+
 .title {
   font-family: 'Mulish', sans-serif;
   font-size: 6.6rem;
