@@ -35,6 +35,13 @@
     width: 100%;
     object-fit: cover;
     padding: 14px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.column img:hover {
+    padding: 26px;
+    cursor: pointer;
 }
 
 
@@ -50,6 +57,9 @@
     }
     .column img {
         padding: 8px;
+    }
+    .column img:hover {
+        padding: 20px;
     }
 }
 
