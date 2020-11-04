@@ -37,12 +37,12 @@ p .work-link {
   transition: all .4s ease; }
 
 p .work-link:hover {
-  color: #2F3347;
+  color: #23273A;
   text-decoration: none; }
 
 p a:hover svg {
   margin-left: 18px;
-  fill: #2F3347; }
+  fill: #23273A; }
 
 .t-about {
   position: relative;

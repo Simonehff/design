@@ -1,6 +1,6 @@
 .work {
     padding-left: 20px;
-    top: 140px;
+    top: 100px;
     z-index: -1;
 }
 
@@ -16,7 +16,7 @@
     -ms-flex-wrap: wrap;
     /* IE10 */
     flex-wrap: wrap;
-    margin: 140px 60px 60px 60px;
+    margin: 100px 60px 60px 60px;
 }
 
 
