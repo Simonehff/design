@@ -1,60 +1,98 @@
 .work {
-  padding-left: 20px;
-  top: 85px;
-  z-index: -1; }
+    padding-left: 20px;
+    top: 140px;
+    z-index: -1;
+}
 
 .header {
-  text-align: center;
-  padding: 32px; }
+    text-align: center;
+    padding: 32px;
+}
 
 .row {
-  display: -ms-flexbox;
-  /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap;
-  /* IE10 */
-  flex-wrap: wrap;
-  margin: 180px 60px 0 60px; }
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    margin: 140px 60px 60px 60px;
+}
+
 
 /* Create four equal columns that sits next to each other */
+
 .column {
-  -ms-flex: 25%;
-  /* IE10 */
-  flex: 25%;
-  max-width: 25%; }
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+}
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: calc(100% - 20px);
-  object-fit: cover;
-  padding: 14px 8px 14px 8px; }
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    object-fit: cover;
+    padding: 14px;
+}
+
+
+/* Responsive layout - margin adjust */
+
+@media screen and (max-width: 1280px) {
+    .work {
+        top: 130px;
+        padding-left: 6px;
+    }
+    .row {
+        margin: 120px 30px 30px 30px;
+    }
+    .column img {
+        padding: 8px;
+    }
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
+
 @media screen and (max-width: 1024px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%; }
-  .row {
-    margin: 160px 40px 0 40px; }
-  .work {
-    padding-left: 20px;
-    top: 105px; } }
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+    .row {
+        margin: 76px 40px 40px 40px;
+    }
+    .work {
+        padding-left: 20px;
+        top: 110px;
+    }
+    .column img {
+        padding: 18px;
+    }
+}
 
 @media screen and (max-width: 991px) {
-  .work {
-    top: 115px; } }
+    .work {
+        top: 120px;
+    }
+}
 
-@media screen and (max-width: 768px) {
-  .work {
-    top: 155px; } }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%; }
-  .work {
-    top: 155px; } }
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .work {
+        top: 120px;
+    }
+    .column img {
+        width: 100%;
+    }
+}

@@ -30,6 +30,20 @@
   font-size: 6.6rem;
   position: absolute; }
 
+p .work-link {
+  color: #E6E8EF;
+  text-decoration: none;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
+
+p .work-link:hover {
+  color: #2F3347;
+  text-decoration: none; }
+
+p a:hover svg {
+  margin-left: 18px;
+  fill: #2F3347; }
+
 .t-about {
   position: relative;
   margin-left: -56px;
@@ -105,7 +119,7 @@ p {
     font-size: 0.95rem;
     line-height: 175%; } }
 
-@media (max-width: 1124px) {
+@media (max-width: 1024px) {
   .title {
     font-size: 4.6rem; }
   h1 {
@@ -239,6 +253,11 @@ hr {
   top: 100px; }
 
 .section-2-about {
+  grid-column: 8 / span 7;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
   display: grid;
   overflow: visible;
   padding-right: 60px; }
@@ -259,9 +278,6 @@ hr {
   padding-left: 150px;
   width: auto; }
 
-tr {
-  vertical-align: initial; }
-
 .about-table {
   width: 100%; }
 
@@ -277,8 +293,17 @@ tr {
 .about-table_td-large {
   width: 66%; }
 
-.about {
-  grid-column: 2 / span 5; }
+.about-table tr {
+  vertical-align: initial; }
+
+.section-1-about {
+  grid-column: 2 / span 5;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: visible; }
 
 .cases1 {
   width: 380px;
@@ -312,7 +337,10 @@ tr {
   flex: 1 1 auto; }
 
 .icon-arrow {
-  margin-bottom: 34px; }
+  margin-bottom: 34px;
+  fill: #E6E8EF;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
 
 .sh-menu {
   display: flex-center;
@@ -374,9 +402,9 @@ tr {
   transition: transform 0.5s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
 
-@media (max-height: 950px) {
-  .section-1,
-  .section-2 {
+@media (max-height: 940px) {
+  .section-1-about,
+  .section-2-about {
     position: relative;
     top: auto;
     transform: none;
@@ -420,11 +448,6 @@ tr {
     grid-template-rows: 1fr 1fr;
     height: 90vh; }
   .section-1 {
-    grid-column: 1 / span 6;
-    grid-row-start: 1;
-    grid-row: auto;
-    height: 500px;
-    top: 60vh;
     margin-left: 0; }
   .section-2 {
     display: none; }
@@ -462,3 +485,107 @@ tr {
     margin-left: 5px; }
   .menu__item {
     padding: 0 12px 0 12px; } }
+
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+  overflow-y: auto; }
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto; }
+
+.modalDialog--wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%; }
+
+.modalDialog--inner {
+  width: 980px;
+  position: relative;
+  margin: 30px auto;
+  padding: 30px 50px;
+  background: #ffffff;
+  z-index: 2; }
+
+@media (max-width: 991px) {
+  .modalDialog--inner {
+    width: 760px; } }
+
+@media (max-width: 767px) {
+  .modalDialog--inner {
+    width: 600px; } }
+
+@media (max-width: 480px) {
+  .modalDialog--inner {
+    width: auto;
+    margin: 10px; } }
+
+.modalDialog--close {
+  font-size: 34px;
+  width: 40px;
+  height: 40px;
+  margin: 0 -10px -32px 0;
+  z-index: 3;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none; }
+
+.modalDialog--close:before {
+  content: "x";
+  color: #4B4F62;
+  margin-top: -4px; }
+
+.modalDialog--close:hover {
+  border-bottom: none; }
+
+.modalDialog--mask {
+  text-indent: -200em;
+  background: #000;
+  opacity: 0;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: 0;
+  z-index: 1;
+  transition: opacity 300ms ease-in; }
+
+:target .modalDialog--mask {
+  opacity: 0.7; }
+
+.modalDialog--content img {
+  max-width: 380px; }
+
+.right {
+  padding-left: 32px;
+  float: right; }
+
+.left {
+  padding-right: 32px;
+  float: left; }
+
+.responsive td {
+  padding-bottom: 100px; }
+
+@media all and (max-width: 768px) {
+  .responsive tr {
+    display: table;
+    width: 100%; }
+  .responsive td {
+    display: table-row;
+    padding-bottom: 60px; } }
