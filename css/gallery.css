@@ -17,6 +17,7 @@
     /* IE10 */
     flex-wrap: wrap;
     margin: 100px 60px 60px 60px;
+    overflow: hidden;
 }
 
 
