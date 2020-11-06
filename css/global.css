@@ -349,6 +349,14 @@ hr {
   transition: all .40s;
   flex-direction: row; }
 
+.cases1:hover {
+  padding: 26px;
+  cursor: pointer; }
+
+.cases2:hover {
+  padding: 26px;
+  cursor: pointer; }
+
 .cases2 {
   width: 380px;
   height: 520px;
