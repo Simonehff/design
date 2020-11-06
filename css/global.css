@@ -625,7 +625,9 @@ hr {
   opacity: 0.7; }
 
 .modalDialog--content table img {
-  max-width: 380px;
+  max-width: 380px; }
+
+.box-shadow {
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.08); }
 
 .right {
