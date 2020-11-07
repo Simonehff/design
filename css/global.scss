@@ -86,6 +86,7 @@ strong {
     font-family: 'Mulish', sans-serif;
     font-size: 6.6rem;
     position: absolute;
+    font-weight: 700;
 }
 
 p .work-link {
@@ -228,6 +229,9 @@ p {
 }
 
 @media (max-width: 768px) {
+    .t-about {
+        margin-left: 0px;
+    }
     h1 {
         font-size: 3rem;
     }
@@ -341,7 +345,6 @@ hr {
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    overflow: auto;
     height: calc(100vh - 90px);
 }
 
@@ -372,15 +375,59 @@ hr {
     top: 100px;
 }
 
+.section-1-about {
+    grid-column: 2 / span 5;
+    text-align: left;
+    overflow: visible;
+    margin-bottom: 60px;
+}
+
 .section-2-about {
     grid-column: 8 / span 7;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
     display: grid;
     overflow: visible;
     padding-right: 60px;
+    margin-bottom: 60px;
+}
+
+.gray-chip {
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    font-size: 11px;
+    padding: 6px 12px 6px 12px;
+    max-width: max-content;
+    border-radius: 30px;
+    margin: 24px 6px 0 0;
+    display: inline-block;
+}
+
+.gray-chip:nth-child(odd) {
+    background: $gray20;
+    color: $gray70;
+}
+
+.gray-chip:nth-child(even) {
+    background: $gray10;
+    color: $gray70;
+}
+
+.gray-chip:nth-child(3n+0) {
+    background: $gray30;
+    color: $gray70;
+}
+
+.gray-div {
+    background-color: $gray10;
+    padding: 120px 0 120px 0;
+    justify-content: center;
+    display: flex;
+}
+
+.gray-div img {
+    width: 90%;
+    margin: auto;
+    border: 20px solid $gray90;
+    border-radius: 6px;
 }
 
 .main .section-3 a img {
@@ -423,16 +470,6 @@ hr {
 
 .about-table tr {
     vertical-align: initial;
-}
-
-.section-1-about {
-    grid-column: 2 / span 5;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    overflow: visible;
 }
 
 .cases1 {
@@ -558,16 +595,6 @@ hr {
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-@media (max-height: 940px) {
-    .section-1-about,
-    .section-2-about {
-        position: relative;
-        top: auto;
-        transform: none;
-        padding-bottom: 40px;
-    }
-}
-
 @media (max-width: 1280px) {
     .sh-menu {
         margin-left: -22px;
@@ -587,6 +614,22 @@ hr {
     .sh-mail {
         grid-row-start: 1;
         margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-1-about,
+    .section-2-about {
+        max-width: 100%;
+        grid-column: 2 / span 12;
+        position: relative;
+        padding: 0px;
+    }
+    .section-1-about {
+        grid-row: 1;
+    }
+    .section-2-about {
+        grid-row: 2;
     }
 }
 
@@ -625,6 +668,10 @@ hr {
     }
     .section-2 {
         display: none;
+    }
+    .section-1-about,
+    .section-2-about {
+        grid-column: 1 / span 6;
     }
     .footer {
         display: flex;
