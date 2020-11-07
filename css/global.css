@@ -309,7 +309,7 @@ hr {
   padding: 6px 12px 6px 12px;
   max-width: max-content;
   border-radius: 30px;
-  margin: 24px 6px 0 0;
+  margin: 10px 6px 0 0;
   display: inline-block; }
 
 .gray-chip:nth-child(odd) {
@@ -683,5 +683,11 @@ hr {
     display: table;
     width: 100%; }
   .responsive td {
-    display: table-row;
-    padding-bottom: 60px; } }
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    padding-bottom: 60px; }
+  .right,
+  .left {
+    float: initial;
+    padding: 0px; } }
