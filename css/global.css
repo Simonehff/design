@@ -265,6 +265,9 @@ hr {
   grid-template-rows: auto auto;
   height: calc(100vh - 90px); }
 
+.y-scroll {
+  overflow-y: scroll; }
+
 .section-1 {
   grid-column: 2 / span 6;
   text-align: left;
@@ -604,24 +607,24 @@ hr {
 
 @media (max-width: 991px) {
   .modalDialog--inner {
-    width: 760px; }
+    width: 767px; }
   .table-img-full-w {
-    max-width: 760px; } }
+    max-width: 100%;
+    margin-left: 0px; } }
 
 @media (max-width: 767px) {
   .modalDialog--inner {
-    width: 600px; }
-  .table-img-full-w {
-    max-width: 600px; } }
+    width: 100%; } }
 
 @media (max-width: 480px) {
   .modalDialog--inner {
     width: auto;
     margin: 0px;
     padding: 16px; }
-  .table-img-full-w {
-    max-width: 100%;
-    margin-left: 0px; } }
+  .modalDialog--close {
+    position: sticky;
+    text-decoration: none;
+    background-color: #fff; } }
 
 .modalDialog--close {
   font-size: 34px;
