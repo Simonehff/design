@@ -130,9 +130,9 @@ p {
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
-  line-height: 160%;
+  line-height: 155%;
   color: #23273A;
-  margin-bottom: 6px; }
+  margin-bottom: 20px; }
 
 @media (max-width: 1280px) {
   .title {
