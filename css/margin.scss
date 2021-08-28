@@ -120,6 +120,12 @@ $margin-default: 10px;
     margin-right: $margin-default * 1;
 }
 
+@media (max-width: 1366px) {
+    .mb-180 {
+        margin-bottom: $margin-default * 10;
+    }
+}
+
 @media (max-width: 1280px) {
     .mb-180 {
         margin-bottom: $margin-default * 13;

@@ -35,7 +35,9 @@
   font-style: italic;
   font-weight: 600;
   transition: all 0.2s;
-  fill: #FF4291; }
+  fill: #FF4291;
+  letter-spacing: 5px;
+  text-transform: uppercase; }
 
 .link svg {
   fill: #FF4291;
