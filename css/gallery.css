@@ -91,6 +91,19 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .row {
+        margin: 76px 24px 20px 24px;
+    }
+    .column img {
+        padding: 8px;
+    }
+    .work {
+        top: 110px;
+        padding-left: 4px;
+    }
+}
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
@@ -99,9 +112,6 @@
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
-    }
-    .work {
-        top: 120px;
     }
     .column img {
         width: 100%;
