@@ -240,6 +240,7 @@ p {
 @media (max-width: 768px) {
     .t-about {
         margin-left: 0px;
+        margin-bottom: -50px;
     }
     h1 {
         font-size: 3rem;
@@ -312,6 +313,7 @@ body {
     width: 100%;
     position: sticky;
     background-color: #fff;
+    z-index: 10;
 }
 
 .section-header {
@@ -463,6 +465,10 @@ hr {
 
 .about-table {
     width: 100%;
+}
+
+.experience-table tr {
+    vertical-align: initial;
 }
 
 .about-table p {
@@ -674,8 +680,7 @@ hr {
         margin: 20px 20px 30px 20px;
         grid-gap: 1px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        height: 90vh;
+        height: calc(90vh - 90px);
     }
     .section-1 {
         margin-left: 0;
@@ -686,6 +691,7 @@ hr {
     .section-1-about,
     .section-2-about {
         grid-column: 1 / span 6;
+        margin-bottom: 40px;
     }
     .footer {
         display: flex;
@@ -703,6 +709,9 @@ hr {
         max-height: 600px;
         width: -webkit-fill-available;
         padding: 20px 0px 20px 0px;
+    }
+    .about-table_td-small {
+        padding-right: 8px;
     }
 }
 
@@ -730,6 +739,9 @@ hr {
     }
     .menu__item {
         padding: 0 12px 0 12px;
+    }
+    .about-table tr td {
+        padding-right: 30px;
     }
 }
 
