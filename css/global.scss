@@ -88,7 +88,6 @@ strong {
     font-size: 8.6rem;
     position: absolute;
     font-weight: 700;
-    z-index: -1;
 }
 
 p .work-link {
@@ -112,6 +111,7 @@ p a:hover svg {
     position: relative;
     margin-left: -56px;
     margin-bottom: -100px;
+    z-index: -1;
 }
 
 h1 {
