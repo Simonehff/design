@@ -11,7 +11,7 @@
   color: #74798F; }
 
 .gray40 {
-  color: #BABFD5; }
+  color: #B3B7CC; }
 
 .gray30 {
   color: #DADCE7; }
@@ -20,10 +20,10 @@
   color: #E6E8EF; }
 
 .gray10 {
-  color: #F2F3F7; }
+  color: #EFF0F5; }
 
 .dark-purple {
-  color: #2A366F; }
+  color: #040405; }
 
 .decos-pink {
   color: #FF4291; }
@@ -58,9 +58,10 @@ strong {
 
 .title {
   font-family: 'Mulish', sans-serif;
-  font-size: 6.6rem;
+  font-size: 8.6rem;
   position: absolute;
-  font-weight: 700; }
+  font-weight: 700;
+  z-index: -1; }
 
 p .work-link {
   color: #E6E8EF;
@@ -79,7 +80,7 @@ p a:hover svg {
 .t-about {
   position: relative;
   margin-left: -56px;
-  margin-bottom: -20px; }
+  margin-bottom: -100px; }
 
 h1 {
   font-family: 'Mulish', sans-serif;
@@ -136,9 +137,14 @@ p {
   color: #23273A;
   margin-bottom: 20px; }
 
+@media (max-width: 1441px) {
+  .title {
+    font-size: 7.6rem; } }
+
 @media (max-width: 1280px) {
   .title {
-    font-size: 5.2rem; }
+    font-size: 5.2rem;
+    margin-bottom: -80px; }
   h1 {
     font-size: 2.5rem; }
   h2 {
@@ -246,7 +252,7 @@ body {
   z-index: 1; }
 
 .sh-link {
-  color: #BABFD5;
+  color: #B3B7CC;
   font-size: 1.3rem;
   font-weight: 300;
   text-decoration: none; }
@@ -322,7 +328,7 @@ hr {
   color: #4B4F62; }
 
 .gray-chip:nth-child(even) {
-  background: #F2F3F7;
+  background: #EFF0F5;
   color: #4B4F62; }
 
 .gray-chip:nth-child(3n+0) {
@@ -330,7 +336,7 @@ hr {
   color: #4B4F62; }
 
 .gray-div {
-  background-color: #F2F3F7;
+  background-color: #EFF0F5;
   padding: 120px 0 120px 0;
   justify-content: center;
   display: flex; }
@@ -408,7 +414,7 @@ hr {
   display: flex;
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
-  color: #BABFD5; }
+  color: #B3B7CC; }
 
 .sh-mail {
   display: flex;
@@ -644,7 +650,7 @@ hr {
 
 .modalDialog--close:before {
   content: "x";
-  color: #BABFD5;
+  color: #B3B7CC;
   margin-top: -4px; }
 
 .modalDialog--close:hover {
