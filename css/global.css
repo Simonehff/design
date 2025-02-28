@@ -293,9 +293,6 @@ p {
   h1 {
     font-size: 3rem;
   }
-  h22 {
-    font-size: 1.7rem;
-  }
   h2 {
     font-size: 1.4rem;
   }
@@ -307,9 +304,6 @@ p {
   }
 }
 @media (max-width: 1024px) {
-  h22 {
-    font-size: 1.6rem;
-  }
   h2 {
     font-size: 1.2rem;
   }
@@ -324,9 +318,6 @@ p {
   }
   h1 {
     font-size: 3rem;
-  }
-  h22 {
-    font-size: 1.8rem;
   }
   h2 {
     font-size: 1.7rem;
@@ -347,17 +338,14 @@ p {
   h1 {
     font-size: 2.35rem;
   }
-  h22 {
+  h2 {
     font-size: 1.6rem;
   }
-  h2 {
-    font-size: 1.4rem;
-  }
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 *,
@@ -475,7 +463,7 @@ hr {
 .container {
   display: flex; /* Makes it a flex container */
   width: 100%; /* Full width of the page */
-  gap: 80px;
+  gap: 58px;
 }
 
 /* Left column (70% of the width) */
@@ -486,6 +474,15 @@ hr {
 /* Right column (30% of the width) */
 .right-column {
   width: 30%;
+}
+
+/* Half page column (50% of the width) */
+.half-column {
+  width: 50%;
+}
+
+.half-column img {
+  width: 100%;
 }
 
 /* Set up the cover-container */
@@ -804,12 +801,11 @@ hr {
   .section-1 {
     grid-column: 1/span 14;
     position: relative;
-    margin-bottom: 80px;
+    padding-top: 40px;
   }
   .section-2 {
     grid-column: 1/span 14;
-    margin-top: 40px;
-    margin-right: -24px;
+    margin-top: 60px;
   }
   .contact-links {
     display: flex;
