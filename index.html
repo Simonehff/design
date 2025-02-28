@@ -1,79 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 
 <head>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>SH Design</title>
+    <title>Simone Hoffmann | DataViz Designer</title>
     <!-- Font Awesome CDN -->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Mulish:700|Karla:400;300&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Karla:wght@200..800&display=swap"
+        rel="stylesheet">
     <meta property="og:image" content="https://simonehff.design/img/sh-cover.png">
     <link rel="https://simonehff.design/img/sh-cover.png" href="https://simonehff.design" />
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="section-header">
-            <section class="sh-logo">
-                <a href="/" class="sh-link">
-                  SH
-                </a>
-            </section>
-            <section class="sh-menu">
-                <a class="menu__item" href="/">
-                    <span class="menu__item-name">HOME</span>
-                </a>
-                <a class="menu__item" href="/about.html">
-                    <span class="menu__item-name">ABOUT</span>
-                </a>
-                <a class="menu__item" href="/work.html">
-                    <span class="menu__item-name">WORK</span>
-                </a>
-            </section>
-        </div>
-    </header>
-    <div class="main">
-        <div class="section-1">
-            <h3 class="mt-60 mb-180 gray90">Hello,</h3>
-            <h4>my name is</h4>
-            <h1 class="gray80">Simone Hoffmann</h1>
-            <h4 class="gray80">and I'm a</h4>
-            <h2 class="mt-5 gray80">Product Designer</h2>
-            <hr class="mt-50 mb-40">
 
-            <div class="footer">
-                <section class="sh-mail">
-                    <i class="far fa-envelope mr-10"></i> simonehff@gmail.com
+    <div class="main">
+        <div class="section-1 fade-in-container">
+            <h2 class="mb-24 gray60 fade-in">Simone Hoffmann</h2>
+            <h1 class="gray80 fade-in">Data Visualization Product Designer</h1>
+            <h4 class="mt-40 gray60 fade-in">About</h4>
+            <p class="fade-in">
+                I’m a Brazil based Product & DataViz Designer with a strong background in UI and web design, simplifying
+                complex data into accessible platforms that ensure an increase in engagement and enhance the understanding of the business.
+            </p>
+            <p class="fade-in">
+                Currently, I'm at <a href="https://clusterdesign.io/">Cluster</a>, working mainly on analytics projects. Previously, I worked on institutional websites and e-commerce at MINT Interactive Lab.
+                My work aims to create engaging platforms that streamline workflows by optimizing usability and making tasks effortless.
+            </p>
+            <hr class="mt-40 mb-40 fade-in">
+
+            <div class="contact fade-in">
+                <div class="contact-links">
+                    <button class="copy-btn" onclick="copyToClipboard(this)">
+                        <i class="far fa-envelope copy-icon mr-10"></i> <span class="copy-text">simonehff@gmail.com</span>
+                        <span class="tooltip">Copied!</span>
+                    </button>
+                </div>
+                <section class="contact-links">
+                    <a href="https://www.linkedin.com/in/simone-hff/" target="_blank"><i class="fas fa-external-link-alt mr-10"></i> linkedin.com/in/simone-hff</a>
                 </section>
-                <section class="sh-signature">
-                    Simone Hoffmann · 2024
+                <!--
+                <section class="contact-links">
+                    <a href="#" target="_blank"><i class="far fa-envelope mr-10"></i> CV</a>
                 </section>
+            -->
             </div>
 
         </div>
 
 
-        <div class="section-2 hide-768">
-            <a href="/work.html#engie2020">
-                <img src="/img/engie20/engie-cover.png" class="cases1">
-            </a>
-            <a href="/work.html#decos">
-                <img src="/img/decos/decos-cover.png" class="cases2">
+        <div class="section-2 fade-in-container mb-40">
+            <h2 class="gray60 mb-16 fade-in">Featured Projects</h2>
+
+            <a href="#" class="projects-link fade-in">
+                <div class="projects-card">
+                    <div class="projects-img-wrapper projects-img">
+
+                        <video class="video-bg" autoplay loop muted playsinline>
+                            <source src="img/mapa/mapa-da-violencia-de-genero-video.mp4" type="video/mp4">
+                          </video>
+                          <img class="video-placeholder" src="img/mapa/mapa-da-violencia-de-genero.png">
+                          
+                    </div>
+                    <h3 class="gray80 fade-in">Brazilian National Map of Gender-Based Violence</h3>
+                    <h6 class="gray70 mt-8 fade-in">Website Design for Avon Institute by Brazilian Senate</h6>
+                    <!--<p class="mt-16 gray-60 fade-in">View work</p>-->
+                </div>
             </a>
 
-            <p class="title gray20"><a href="/work.html" class="work-link">WORK <svg class="icon-arrow" width="121" height="16" viewBox="0 0 121 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M114.343 0.92888L120.707 7.29284C121.098 7.68336 121.098 8.31653 120.707 8.70705L114.343 15.071C113.953 15.4615 113.319 15.4615 112.929 15.071C112.538 14.6805 112.538 14.0473 112.929 13.6568L117.586 8.99995H0V6.99995H117.586L112.929 2.34309C112.538 1.95257 112.538 1.3194 112.929 0.92888C113.319 0.538355 113.953 0.538355 114.343 0.92888Z"/>
-</svg></a>
-            </p>
+            <a href="#" class="projects-link fade-in">
+                <div class="projects-card">
+                    <div class="projects-img-wrapper projects-img">
+                        <video class="video-bg" autoplay loop muted playsinline>
+                            <source src="img/panorama/panorama-cancer-de-mama-video.mp4" type="video/mp4">
+                          </video>
+                          <img class="video-placeholder" src="img/panorama/panorama-do-cancer-de-mama.png">
+                    </div>
+                    <h3 class="gray80 fade-in">Overview of Breast Cancer in Brazil’s Unified Health System (SUS)</h3>
+                    <h6 class="gray70 mt-8 fade-in">Website Design for Avon Institute</h6>
+                    <!--<p class="mt-16 gray-60 fade-in">View work</p>-->
+                </div>
+            </a>
 
+            <a href="/work/plastubos.html" class="projects-link fade-in">
+                <div class="projects-card">
+                    <div class="projects-img-wrapper projects-img">
+                        <video class="video-bg" autoplay loop muted playsinline>
+                            <source src="img/plastubos/plastubos-video.mp4" type="video/mp4">
+                          </video>
+                          <img class="video-placeholder" src="img/plastubos/plastubos-home.png">
+                    </div>
+                    <h3 class="gray80 fade-in">Plastubos</h3>
+                    <h6 class="gray70 mt-8 fade-in">Business Website Design</h6>
+                    <p class="mt-16 gray-60 fade-in">View work</p>
+                </div>
+            </a>
 
 
         </div>
 
     </div>
+
+
 
     </div>
 </body>

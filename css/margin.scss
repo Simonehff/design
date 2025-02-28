@@ -1,5 +1,5 @@
 //MARGEM
-$margin-default: 10px;
+$margin-default: 8px;
 .mb-180 {
     margin-bottom: $margin-default * 18;
 }
@@ -24,32 +24,32 @@ $margin-default: 10px;
     margin-bottom: $margin-default * 6;
 }
 
-.mb-50 {
+.mb-40 {
     margin-bottom: $margin-default * 5;
 }
 
-.mb-40 {
+.mb-32 {
     margin-bottom: $margin-default * 4;
 }
 
-.mb-30 {
+.mb-24 {
     margin-bottom: $margin-default * 3;
 }
 
-.mb-20 {
+.mb-16 {
     margin-bottom: $margin-default * 2;
 }
 
-.mb-15 {
-    margin-bottom: $margin-default * 1.5;
-}
-
-.mb-10 {
+.mb-8 {
     margin-bottom: $margin-default * 1;
 }
 
 .mt-140 {
     margin-top: $margin-default * 14;
+}
+
+.mt-100 {
+    margin-top: $margin-default * 10;
 }
 
 .mt-80 {
@@ -61,30 +61,30 @@ $margin-default: 10px;
 }
 
 .mt-50 {
-    margin-top: $margin-default * 5;
+    margin-top: $margin-default * 5.5;
 }
 
 .mt-40 {
+    margin-top: $margin-default * 5;
+}
+
+.mt-32 {
     margin-top: $margin-default * 4;
 }
 
-.mt-30 {
+.mt-24 {
     margin-top: $margin-default * 3;
 }
 
-.mt-20 {
+.mt-16 {
     margin-top: $margin-default * 2;
 }
 
-.mt-15 {
-    margin-top: $margin-default * 1.5;
-}
-
-.mt-10 {
+.mt-8 {
     margin-top: $margin-default * 1;
 }
 
-.mt-5 {
+.mt-4 {
     margin-top: $margin-default * 0.5;
 }
 
