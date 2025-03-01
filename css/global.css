@@ -622,6 +622,28 @@ hr {
   margin-bottom: 24px;
 }
 
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  margin: 8px 0 0 0;
+  gap: 8px;
+  padding: 6px 16px;
+  border: 1px solid #EDDE98;
+  background: linear-gradient(to bottom, rgb(251, 213, 115) 0%, rgb(251, 218, 131) 20%, rgba(168, 99, 0, 0.75) 50%, rgb(203, 156, 72) 60%, rgb(251, 218, 131) 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 96% 50%, 100% 100%, 0% 100%, 4% 50%);
+          clip-path: polygon(0% 0%, 100% 0%, 96% 50%, 100% 100%, 0% 100%, 4% 50%);
+}
+
+.award-badge .svg-inline--fa {
+  color: #fff;
+  font-size: 1rem;
+}
+
 .gray-chip {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
