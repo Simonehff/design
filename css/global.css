@@ -202,8 +202,9 @@ h1, h2 {
   font-family: "Domine", sans-serif;
 }
 
-h4, h5, h6 {
+h3, h4, h5, h6 {
   font-family: "Karla", sans-serif;
+  letter-spacing: -2%;
 }
 
 h1 {
@@ -218,9 +219,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.34rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  letter-spacing: -1.5%;
+  letter-spacing: -2%;
 }
 
 h4 {
@@ -229,6 +230,7 @@ h4 {
   line-height: 150%;
   text-transform: uppercase;
   margin-bottom: 24px;
+  letter-spacing: 3%;
 }
 
 h6 {
@@ -273,7 +275,7 @@ p {
   font-style: normal;
   font-weight: 380;
   font-size: 1.08rem;
-  letter-spacing: 1%;
+  letter-spacing: 0%;
   line-height: 150%;
   color: #2F3347;
   margin-bottom: 24px;
@@ -361,7 +363,7 @@ p {
 
 body {
   font-family: "Karla", sans-serif;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.02rem;
   color: #2F3347;
 }
 
@@ -476,6 +478,10 @@ hr {
   width: 30%;
 }
 
+.right-column img {
+  max-width: 100%;
+}
+
 /* Half page column (50% of the width) */
 .half-column {
   width: 50%;
@@ -483,6 +489,95 @@ hr {
 
 .half-column img {
   width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  width: 100%;
+  gap: 36px; /* Optional: Adds space between sections */
+  margin-bottom: 80px;
+  align-items: stretch; /* Ensures all columns have the same height */
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column; /* Ensures content inside the section is aligned properly */
+  align-items: center;
+  justify-content: flex-start; /* Aligns content to the top */
+  border: 1px solid #EFF0F5; /* Optional: adds a border between sections */
+  font-size: 1.5rem;
+  border-radius: 2px;
+}
+
+.footer-section:hover {
+  background-color: #F7F7F8;
+}
+
+.footer-section img {
+  width: 100%; /* Image will scale to fit the column */
+  height: auto; /* Maintain aspect ratio */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensures the image fills the space */
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+/* Full-width div */
+.full-width {
+  grid-column: 1/-1; /* Makes it span across all columns */
+}
+
+/* Wrapper to contain the zoom effect */
+.footer-projects-img-wrapper {
+  width: 624px;
+  height: auto;
+  overflow: hidden; /* Prevents overflow */
+  position: relative;
+}
+
+.footer-projects-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0, 0.11, 0.48, 0.99);
+}
+
+.footer-projects-link {
+  text-decoration: none; /* Removes default link underline */
+  display: block; /* Makes the whole card clickable */
+}
+
+.footer-projects-card {
+  padding: 32px 24px 24px 24px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.footer-projects-card h3 {
+  padding: 12px 0 8px 0;
+}
+
+.footer-projects-card:hover .projects-img {
+  transform: scale(1.04);
+  cursor: pointer;
+  display: block;
+}
+
+.footer-projects-card p {
+  text-decoration: underline;
+  color: #4B4F62;
+}
+
+/* Color effect when hovering over the card */
+.footer-projects-card:hover p,
+.footer-projects-card:hover h3 {
+  color: #040405;
+}
+
+.projects-card:hover h6 {
+  color: #2F3347;
 }
 
 /* Set up the cover-container */
@@ -515,8 +610,6 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  padding: 20px;
-  border-radius: 10px;
 }
 
 /* Styling for text inside the content block */
@@ -639,8 +732,12 @@ hr {
 }
 
 .projects-card {
-  padding: 0 0 84px 0;
+  padding: 0 0 88px 0;
   transition: transform 0.4s ease-in-out;
+}
+
+.projects-card h3 {
+  padding: 12px 0 8px 0;
 }
 
 .projects-card:hover .projects-img {
@@ -774,6 +871,9 @@ hr {
     grid-column: 9/span 6;
     margin-top: 30vh;
   }
+  .section-work {
+    grid-column: 3/span 10;
+  }
 }
 @media (max-width: 1441px) {
   .section-1 {
@@ -787,16 +887,24 @@ hr {
     width: 480px;
     height: 293px;
   }
+  .footer {
+    gap: 16px;
+  }
 }
 @media (max-width: 1201px) {
   .projects-img-wrapper {
     width: 378px;
     height: 230px;
   }
+  .section-work {
+    grid-column: 2/span 12;
+    padding-top: 10vh;
+  }
 }
 @media (max-width: 991px) {
   body {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .section-1 {
     grid-column: 1/span 14;
@@ -830,6 +938,31 @@ hr {
   }
   .about-table_td-small {
     padding-right: 8px;
+  }
+  .section-work {
+    grid-column: 1/span 14;
+  }
+  .footer {
+    grid-template-columns: auto;
+  }
+  .left-column, .right-column {
+    width: 50%;
+  }
+  .right-column img, .left-column img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensures the image is responsive */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+  }
+}
+@media (max-width: 621px) {
+  .container {
+    display: block;
+  }
+  .right-column, .left-column, .half-column {
+    width: 100%;
+    margin: 16px 0 16px 0;
   }
 }
 .modalDialog {

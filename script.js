@@ -56,3 +56,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+//Autoplay video only when visible
+document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll("video");
+
+    if (videos.length === 0) return; // Exit if no videos are found
+
+    // Create an observer for each video element
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target; // Get the video element
+            if (entry.intersectionRatio >= 0.8) {
+                video.play();
+            } else if (entry.intersectionRatio < 0.2) {
+                video.pause();
+                video.currentTime = 0; // Reset video to the start when mostly out of view
+            }
+        });
+    }, {
+        threshold: [0.2, 0.8] // Detect when video is 80% visible or when it drops below 20%
+    });
+
+    // Observe each video
+    videos.forEach(video => observer.observe(video));
+});
