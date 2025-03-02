@@ -1,29 +1,3 @@
-video {
-    width: 100%; /* Make it responsive */
-    height: auto;
-    display: block; /* Prevents extra space below */
-    object-fit: cover; /* Ensures it behaves like an image */
-  }  
-
-  .video-placeholder {
-    display: none; /* Hidden by default, shown on mobile */
-    width: 100%;
-    height: auto;
-  }
-
-
-  @media (max-width: 768px) { /* Adjust breakpoint as needed */
-    video {
-      display: none;
-    }
-    .video-placeholder {
-      display: block;
-    }
-  }
-  
-
-
-
 // COLOURS
 $gray90: #23273A;
 $gray80: #2F3347;
@@ -152,6 +126,34 @@ $decos-pink: #FF4291;
 
 
 
+video {
+    width: 100%; /* Make it responsive */
+    height: auto;
+    display: block; /* Prevents extra space below */
+    object-fit: cover; /* Ensures it behaves like an image */
+  }  
+
+  .video-placeholder {
+    display: none; /* Hidden by default, shown on mobile */
+    width: 100%;
+    height: auto;
+  }
+
+
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    video {
+      display: none;
+    }
+    .video-placeholder {
+      display: block;
+    }
+  }
+  
+  .caption {
+    margin: auto;
+    font-size: 0.9rem;
+    color: $gray60;
+  }
 
 
 
@@ -549,7 +551,7 @@ hr {
     grid-template-rows: auto auto;
     background-color: transparent;
     animation: bgFadeIn 0.6s ease-in-out 1.4s forwards; // Uses an animation
-    height: 86vh;
+    height: 80vh;
     justify-content: center;
     align-items: center; // Center vertically
 }
@@ -569,9 +571,9 @@ hr {
 .footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // 3 equal columns
-    grid-column: 2/span 12;
+    grid-column: 3/span 10;
     width: 100%;
-    gap: 36px; // Optional: Adds space between sections
+    gap: 32px; // Optional: Adds space between sections
     align-items: stretch; // Ensures all columns have the same height
     padding-top: 32px;
 }
@@ -587,46 +589,6 @@ hr {
     background-color: #fff;
 }
 
-/*
-
-.footer {
-    display: grid;
-    margin-top: 15vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    background-color: $gray05;
-    height: 80vh;
-    justify-content: center;
-
-    height: 80vh; // Set the footer height
-    display: flex;
-    justify-content: center; // Center horizontally
-    align-items: center; // Center vertically
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 equal columns
-    grid-column: 2/span 12;
-    width: 100%;
-    gap: 36px; // Optional: Adds space between sections
-    margin-bottom: 80px;
-    align-items: stretch; // Ensures all columns have the same height
-    margin: 52px 0 52px 0;
-}
-
-.footer-section {
-    display: flex;
-    flex-direction: column; // Ensures content inside the section is aligned properly
-    align-items: center;
-    justify-content: flex-start; // Aligns content to the top
-    border: 1px solid $gray10; // Optional: adds a border between sections
-    font-size: 1.5rem;
-    border-radius: 2px;
-    background-color: #fff;
-}
-
-*/
 
 .footer-section:hover {
     // background-color: $gray05;
@@ -728,7 +690,7 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.65); /* 80% black overlay */
+    background-color: rgba(0, 0, 0, 0.75); /* 80% black overlay */
     z-index: 1; /* Make sure overlay is on top of the image */
 }
 
@@ -1041,6 +1003,10 @@ hr {
     }
     .section-work {
         grid-column: 3 / span 10;
+    }
+    .footer-content {
+        grid-column: 2/span 12;
+        gap: 24px;
     }
 }
 
