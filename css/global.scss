@@ -544,26 +544,93 @@ hr {
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    margin-top: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    background-color: transparent;
+    animation: bgFadeIn 0.6s ease-in-out 1.4s forwards; // Uses an animation
+    height: 86vh;
+    justify-content: center;
+    align-items: center; // Center vertically
+}
+
+@keyframes bgFadeIn {
+    from {
+        background-color: transparent;
+        transform: translateY(80px);
+    }
+    to {
+        background-color: $gray05; // Final background color
+        transform: translateY(0px);
+    }
+}
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 equal columns
+    grid-column: 2/span 12;
     width: 100%;
-    gap: 36px; /* Optional: Adds space between sections */
-    margin-bottom: 80px;
-    align-items: stretch; /* Ensures all columns have the same height */
+    gap: 36px; // Optional: Adds space between sections
+    align-items: stretch; // Ensures all columns have the same height
+    padding-top: 32px;
 }
 
 .footer-section {
     display: flex;
-    flex-direction: column; /* Ensures content inside the section is aligned properly */
+    flex-direction: column; // Ensures content inside the section is aligned properly
     align-items: center;
-    justify-content: flex-start; /* Aligns content to the top */
-    border: 1px solid $gray10; /* Optional: adds a border between sections */
+    justify-content: flex-start; // Aligns content to the top
+    border: 1px solid $gray10; // Optional: adds a border between sections
     font-size: 1.5rem;
     border-radius: 2px;
+    background-color: #fff;
 }
 
+/*
+
+.footer {
+    display: grid;
+    margin-top: 15vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    background-color: $gray05;
+    height: 80vh;
+    justify-content: center;
+
+    height: 80vh; // Set the footer height
+    display: flex;
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 equal columns
+    grid-column: 2/span 12;
+    width: 100%;
+    gap: 36px; // Optional: Adds space between sections
+    margin-bottom: 80px;
+    align-items: stretch; // Ensures all columns have the same height
+    margin: 52px 0 52px 0;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column; // Ensures content inside the section is aligned properly
+    align-items: center;
+    justify-content: flex-start; // Aligns content to the top
+    border: 1px solid $gray10; // Optional: adds a border between sections
+    font-size: 1.5rem;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+*/
 
 .footer-section:hover {
-    background-color: $gray05;
+    // background-color: $gray05;
+    border: 1px solid $gray20;
 }
 
 .footer-section img {
@@ -746,11 +813,15 @@ hr {
     display: flex;
 }
 
-.gray-div img {
+
+.gray-div img, .gray-div .video-bg {
     width: 90%;
     margin: auto;
-    border: 20px solid $gray90;
-    border-radius: 6px;
+    border-radius: 16px;
+    border: 20px solid $gray90; /*Inner border */
+    outline: 2px solid $gray70;  /* Middle border */
+    box-shadow: 0 0 0 5px $gray40; /* Outer border */
+    outline-offset: -1px; /* Space between inner and middle borders */
 }
 
 .main .section-3 a img {
@@ -1000,6 +1071,15 @@ hr {
         grid-column: 2 / span 12;
         padding-top: 10vh;
     }
+    .footer {
+        height: auto;
+        margin-top: 40px;
+    }
+    .footer-content {
+        gap: 16px;
+        grid-column: 1/span 14;
+        padding: 40px 24px 40px 24px;
+}
 }
 
 
@@ -1059,6 +1139,10 @@ hr {
         justify-content: center; /* Centers horizontally */
         align-items: center; /* Centers vertically */
     }
+    .footer-content {
+        grid-template-columns: auto;
+    }
+
 }
 
 
