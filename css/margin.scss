@@ -1,5 +1,6 @@
 //MARGEM
 $margin-default: 8px;
+
 .mb-180 {
     margin-bottom: $margin-default * 18;
 }
@@ -127,6 +128,9 @@ $margin-default: 8px;
 @media (max-width: 1441px) {
     .mb-180 {
         margin-bottom: $margin-default * 10;
+    }
+    .mb-120 {
+        margin-bottom: $margin-default * 4;
     }
 }
 
