@@ -126,6 +126,9 @@
   .mb-180 {
     margin-bottom: 80px;
   }
+  .mb-120 {
+    margin-bottom: 32px;
+  }
 }
 @media (max-width: 1280px) {
   .mb-180 {

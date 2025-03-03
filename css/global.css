@@ -342,6 +342,9 @@ p {
   p {
     font-size: 1rem;
   }
+  .content-block h1 {
+    font-size: 2.4rem;
+  }
 }
 @media (max-width: 480px) {
   .menu-link {
@@ -449,7 +452,7 @@ hr {
   position: sticky;
   top: 1rem;
   align-self: start;
-  padding-top: 12vh;
+  padding-top: 15vh;
 }
 
 .section-2 {
@@ -610,6 +613,7 @@ hr {
 .footer-projects-card:hover p,
 .footer-projects-card:hover h3 {
   color: #040405;
+  font-weight: 600;
 }
 
 .projects-card:hover h6 {
@@ -815,6 +819,7 @@ hr {
 .projects-card:hover p,
 .projects-card:hover h3 {
   color: #040405;
+  font-weight: 600;
 }
 
 .projects-card:hover h6 {
