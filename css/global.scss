@@ -897,13 +897,16 @@ hr {
     color: $gray80;
 }
 
-
-.contact, .copy-text {
-    font-family: "Karla", sans-serif;
+.contact {
     display: flex;
+    justify-content: left;    
+    color: $gray50;
+}
+
+.contact-links, .copy-text {
+    font-family: "Karla", sans-serif;
     font-size: 0.96rem;
     letter-spacing: 4%;
-    color: $gray50;
     text-underline-offset: 2px;
     flex-wrap: wrap;
     margin: 0;
@@ -913,9 +916,6 @@ hr {
 }
 
 .contact-links {
-    display: flex;
-    justify-content: left;
-    // flex: 1 1 auto;
     padding: 0 32px 24px 0;
 }
 
