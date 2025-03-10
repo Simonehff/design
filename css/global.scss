@@ -377,7 +377,7 @@ p {
         font-size: 1rem;
     }
     .content-block h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 }
 
@@ -713,6 +713,7 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
+    width: 96%;
 }
 
 /* Styling for text inside the content block */
@@ -782,7 +783,7 @@ hr {
     background-color: $gray10;
     padding: 120px 0 120px 0;
     justify-content: center;
-    display: flex;
+    display: flex !important;
 }
 
 
@@ -1064,6 +1065,10 @@ hr {
         overflow-y: auto;
         overflow-x: hidden;
     }
+    .container {
+        display: grid;
+        gap: 24px;
+      }
     .section-1 {
         grid-column: 1 / span 14;
         position: relative;
@@ -1072,6 +1077,13 @@ hr {
     .section-2 {
         grid-column: 1 / span 14;
         margin-top: 60px;
+    }
+    .gray-div {
+        padding: 0px;
+        background-color: #fff;
+    }
+    .gray-div img, .gray-div .video-bg {
+        width: 100%;
     }
     .contact-links {
         display: flex;
@@ -1104,9 +1116,8 @@ hr {
     .footer {
         grid-template-columns: auto;
     }
-    .left-column, .right-column {
-        width: 50%;
-
+    .left-column, .right-column, .half-column {
+        width: 100%;
     }
     .right-column img, .left-column img {
         display: block;
