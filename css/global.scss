@@ -713,7 +713,7 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
-    width: 96%;
+    width: 60%;
 }
 
 /* Styling for text inside the content block */
@@ -1036,6 +1036,9 @@ hr {
     }
     .footer {
         gap: 16px;
+    }
+    .content-block {
+        width: 96%;
     }
 }
 
